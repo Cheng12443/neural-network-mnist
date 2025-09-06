@@ -95,6 +95,25 @@ python python/train_mnist.py
 - **MNIST**: 手写数字识别数据集，包含60,000个训练样本和10,000个测试样本
 - **加密货币数据**: 历史价格数据用于训练和预测
 
+### 数据集下载
+
+由于GitHub文件大小限制，MNIST数据集需要单独下载：
+
+1. **下载MNIST数据集**：
+```bash
+cd MNIST
+wget http://yann.lecun.com/exdb/mnist/train-images-idx3-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/train-labels-idx1-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/t10k-images-idx3-ubyte.gz
+wget http://yann.lecun.com/exdb/mnist/t10k-labels-idx1-ubyte.gz
+gunzip *.gz
+```
+
+2. **或者使用Python自动下载**：
+```bash
+python python/train_mnist.py --download
+```
+
 ## 模型性能
 
 - MNIST测试准确率: >98%
